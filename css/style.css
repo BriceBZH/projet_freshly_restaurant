@@ -14,6 +14,7 @@ h1 {
     justify-content:center;
     display: flex;
     align-items: center;
+    text-transform: uppercase;
 }
 h2 {
     font-family: 'Merienda', cursive;
@@ -71,9 +72,17 @@ nav menu {
 nav menu li {
     background-color: #ebe3db;
     border-bottom: 1px solid #4c4343;
+    padding: 0.5em;
+    font-weight: bold;
 }
 nav menu li a {
     color: #000;
+    transition: all 3s ;
+    display: block;
+}
+nav menu li a:hover {
+    background-color: #950000;
+    color: white;
 }
 .selected {
     background-color: #4c4343;
@@ -92,23 +101,50 @@ nav menu li a {
     background-color: #ebe3db;
     display: flex;
     flex-direction: column;
-    padding-bottom: 1em;
 }
 .menu ul {
     list-style: none;
+    padding:0;
+    margin: 0;
 }
 .menu ul li::before {
     content: "\f005";
     font-size: 1rem;
 	font-family: 'FontAwesome';
 	color: #950000;
+	padding:1em;
 }
 .menu ul li {
     border-bottom: 1px dashed black;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.5em;
+}
+.menu img {
+    transition: opacity 2s;
+}
+.menu img:hover {
+    opacity: 0.5;
+    border: 2px solid white;
+    border-style: inset;
+    padding: 5em;
 }
 .more {
     background-color: #4c4343;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+    box-shadow: 2px 2px 2px silver;
+    transition: background-color 3s;
+}
+.more img {
+    max-width: 1em;
+    padding: 0.5em;
+}
+.more:hover {
+    background-color: #950000;
 }
 article + article {
     margin-top: 1em;
