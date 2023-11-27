@@ -91,6 +91,10 @@ nav menu li a:hover { /*********************************************************
     color: #fff;
 }
 /******************* Main *************************/
+figure {
+    margin: 0;
+    padding: 0;
+}
 .prix_menu {
     font-size: 5rem;
 }
@@ -101,6 +105,7 @@ nav menu li a:hover { /*********************************************************
     background-color: #ebe3db;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 .menu ul {
     list-style: none;
@@ -136,9 +141,6 @@ nav menu li a:hover { /*********************************************************
 }
 .more:hover {
     background-color: #950000;
-}
-article + article {
-    margin-top: 1em;
 }
 /* *****************************************************************
  TRANSFORM
@@ -184,30 +186,98 @@ article + article {
 /******************* Footer *************************/
 .titre_footer {
     font-size: 1.8rem;
+    padding-bottom: 0.2em;
     border-bottom: 1px dashed white;
+    font-family: 'Merienda', cursive;
 }
 .button_tri, .valid_form {
     font-size: 1.6rem;
 }
-.footer {
+.footer, .license {
 	text-align: center;
 	color: #fff;
 	background-color: #444;
 	font-size: 1.6rem;
 }
-.footer1 {
+.footer ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+.footer {
     background-image: url(../img/footer-bg.jpg);
     background-size: cover;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
-.footer a {
+.footer a, .license a {
     color: white;
     text-decoration:underline;
 }
+.license {
+    padding: 1em;
+    padding-right:2em;
+    padding-left:2em;
+}
+.col {
+    width: 100%;
+}
 
 
 
+/* *****************************************************************
+TABLETTE
+***************************************************************** */
 
+@media screen and (min-width: 780px) {
+    nav menu {
+        background-color: #ebe3db;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+    nav menu li {
+        border: 0;
+    }
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+    .col {
+        width:30%;
+    }
+}
 
+/* *****************************************************************
+DESKTOP
+***************************************************************** */
+
+@media screen and (min-width: 1100px) {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    .menus {
+        display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+    }
+    .menu {
+        width: 32%;
+    }
+    section h2 {
+		flex: 1 0 100%;
+	}
+	figure {
+	    display: flex;
+	    flex-direction: row-reverse;
+	}
+	figure img {
+	    width: 50%;
+	}
+}
 
 
 
