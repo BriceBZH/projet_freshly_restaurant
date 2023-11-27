@@ -80,7 +80,7 @@ nav menu li a {
     transition: all 3s ;
     display: block;
 }
-nav menu li a:hover {
+nav menu li a:hover { /************************************************************************************/
     background-color: #950000;
     color: white;
 }
@@ -120,15 +120,6 @@ nav menu li a:hover {
     padding-bottom: 0.8em;
     padding-left: 1.5em;
 }
-.menu img {
-    transition: opacity 2s;
-}
-.menu img:hover {
-    opacity: 0.5;
-    border: 2px solid white;
-    border-style: inset;
-    padding: 5em;
-}
 .more {
     background-color: #4c4343;
     color: #fff;
@@ -148,6 +139,47 @@ nav menu li a:hover {
 }
 article + article {
     margin-top: 1em;
+}
+/* *****************************************************************
+ TRANSFORM
+***************************************************************** */
+
+.img_menu {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.img_menu img {
+	vertical-align: top;
+	transition: all .5s;
+}
+
+.img_menu:hover img {
+	opacity: 0.5;
+}
+
+.img_menu p {
+    padding: 2em;
+	bottom: 5em;
+	width: 30%;
+	left:9em;
+	position: absolute;
+    right: 0;
+    /*
+    bottom:0
+    left: 0;
+    */;
+    opacity: 0;
+	transition: all .5s;
+}
+.img_menu:hover p {
+	opacity: 1;
+	/*
+	transform: scale(2) translateY(-5.7em);
+	*/
+	transform: scale(2);
+	border: 3px solid white;
 }
 /******************* Footer *************************/
 .titre_footer {
